@@ -1,0 +1,208 @@
+body {
+    background-color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    color: #9e9e9e;
+}
+
+.switch {
+    margin-top: 200px;
+    display: block;
+}
+
+
+/* Hide default input */
+
+.toggle input {
+    display: inline-none;
+}
+
+
+/* The container and background */
+
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 26px;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    background-color: #ccefa9;
+    border: 1px solid #ccefa9;
+    border-radius: 13px;
+    transition: all 0.4s;
+}
+
+
+/* The sliding button */
+
+.slider:before {
+    position: absolute;
+    content: "";
+    width: 28px;
+    height: 28px;
+    left: 0px;
+    top: -2px;
+    bottom: 0px;
+    background-color: #c3c3c3;
+    border-radius: 28px;
+    transition: all 0.4s;
+}
+
+
+/* On checked */
+
+input:checked+.slider {
+    background-color: #ccefa9;
+}
+
+input:checked+.slider:before {
+    transform: translateX(30px);
+    background-color: #8eba5b;
+}
+
+.monthly {
+    font-size: 18px;
+    text-align: center;
+}
+
+.annually {
+    font-size: 18px;
+    text-align: center;
+    color: #8eba5b;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.division {
+    width: 360px;
+    height: 577px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 1;
+    flex-grow: 1;
+    background-color: #ffffff;
+    margin-top: 60px;
+    margin-bottom: 220px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.plan-title {
+    font-size: 24px;
+    font-weight: 300;
+    color: #696969;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 40px;
+}
+
+.price {
+    font-size: 48px;
+    font-weight: 300;
+    color: #4a90e2;
+    margin: 30px 0px 0px 0px;
+}
+
+.periods {
+    margin-bottom: 0px;
+    margin-top: 10px;
+    color: #c3c3c3;
+    font-size: 20px;
+}
+
+hr {
+    width: 240px;
+    height: 2px;
+    opacity: 0.2;
+    border: solid 1px #979797;
+    margin: 40px 60px;
+}
+
+ul {
+    list-style: none;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 0px;
+    color: #9e9e9e;
+}
+
+li {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 2.22;
+}
+
+.division .button {
+    font-size: 16px;
+    font-weight: 600;
+    color: #4a90e2;
+    border: solid 1px #4a90e2;
+    padding: 19px 106px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.division:hover {
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
+    border-top: solid 3px #ccefa9;
+    ;
+}
+
+.division:hover .plan-title {
+    margin-top: 60px;
+}
+
+.division:hover .price {
+    font-size: 52px;
+}
+
+.division:hover ul {
+    font-weight: 600;
+}
+
+.button:hover {
+    background-color: #4a90e2;
+    color: #fff;
+}
+
+@media screen and (min-device-width: 200px) and (max-device-width: 480px) {
+    .container {
+        flex-direction: column;
+    }
+    .division {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (min-device-width: 481px) and (max-device-width: 768px) {
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .division {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (min-device-width: 769px) and (max-device-width: 1800px) {
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
