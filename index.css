@@ -2,7 +2,6 @@ body {
     background-color: #ffffff;
     font-family: 'Open Sans', sans-serif;
     text-align: center;
-    color: #9e9e9e;
 }
 
 .switch {
@@ -10,15 +9,9 @@ body {
     display: block;
 }
 
-
-/* Hide default input */
-
 .toggle input {
     display: inline-none;
 }
-
-
-/* The container and background */
 
 .toggle {
     position: relative;
@@ -40,9 +33,6 @@ body {
     transition: all 0.4s;
 }
 
-
-/* The sliding button */
-
 .slider:before {
     position: absolute;
     content: "";
@@ -56,9 +46,6 @@ body {
     transition: all 0.4s;
 }
 
-
-/* On checked */
-
 input:checked+.slider {
     background-color: #ccefa9;
 }
@@ -71,6 +58,7 @@ input:checked+.slider:before {
 .monthly {
     font-size: 18px;
     text-align: center;
+    color: #9e9e9e;
 }
 
 .annually {
