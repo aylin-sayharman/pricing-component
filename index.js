@@ -2,8 +2,6 @@ let prices = document.getElementsByClassName("price");
 let periodArray = document.getElementsByClassName("periods");
 let perYear = "per year";
 
-
-
 let checkbox = document.getElementById("checkboxId");
 checkbox.addEventListener("click", function() {
 
@@ -19,17 +17,15 @@ checkbox.addEventListener("click", function() {
             let totalString = total.toFixed(2);
 
             prices[i].innerHTML = "$".concat(totalString);
-
         }
     } else {
-        for (let i = 0; i < 3; i++) {
-            periodArray[i].innerHTML = "per month";
+        for (let j = 0; j < 3; j++) {
+            periodArray[j].innerHTML = "per month";
         }
         prices[0].innerHTML = "$9.99";
         prices[1].innerHTML = "$19.99";
         prices[2].innerHTML = "$29.99";
-
-    }
+    };
 
 
 })
