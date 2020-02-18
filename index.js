@@ -8,23 +8,23 @@ checkbox.addEventListener("click", function() {
     if (checkbox.checked) {
         for (let i = 0; i < prices.length; i++) {
 
-            periodArray[i].innerHTML = perYear;
+            periodArray[i].innerText = perYear;
 
-            let replaced = prices[i].innerHTML.replace(prices[i].innerHTML.charAt(0), '');
+            let replaced = prices[i].innerText.replace(prices[i].innerText.charAt(0), '');
 
             let total = ((parseFloat(replaced) * 12) - (1.44 * parseFloat(replaced)));
 
             let totalString = total.toFixed(2);
 
-            prices[i].innerHTML = "$".concat(totalString);
+            prices[i].innerText = "$".concat(totalString);
         }
     } else {
         for (let j = 0; j < periodArray.length; j++) {
-            periodArray[j].innerHTML = "per month";
+            periodArray[j].innerText = "per month";
         }
-        prices[0].innerHTML = "$9.99";
-        prices[1].innerHTML = "$19.99";
-        prices[2].innerHTML = "$29.99";
+        prices[0].innerText = "$9.99";
+        prices[1].innerText = "$19.99";
+        prices[2].innerText = "$29.99";
     };
 
 
