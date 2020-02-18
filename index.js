@@ -6,7 +6,7 @@ let checkbox = document.getElementById("checkboxId");
 checkbox.addEventListener("click", function() {
 
     if (checkbox.checked) {
-        for (let i = 0; i < 3; i++) {
+        for (let i = 0; i < prices.length; i++) {
 
             periodArray[i].innerHTML = perYear;
 
@@ -19,7 +19,7 @@ checkbox.addEventListener("click", function() {
             prices[i].innerHTML = "$".concat(totalString);
         }
     } else {
-        for (let j = 0; j < 3; j++) {
+        for (let j = 0; j < periodArray.length; j++) {
             periodArray[j].innerHTML = "per month";
         }
         prices[0].innerHTML = "$9.99";
